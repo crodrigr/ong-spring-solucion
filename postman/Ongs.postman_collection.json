@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "5ebeea16-67f8-4c64-8a39-d5ba51d6f9c8",
+		"name": "Ongs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11015146"
+	},
+	"item": [
+		{
+			"name": "Envio-FindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/envios/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"envios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save-envio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"fecha\": \"2023-11-19\",\n    \"codigo\": \"ENV001\",\n    \"refugio\": 1,\n    \"detalleEnvios\": [\n        {\n          \n            \"categoria\": \"HUMANITARIA\",\n            \"subcategoria\": \"MEDICOS\",\n            \"descripcion\": \"MEDICOS GENERALES\",\n            \"cantidad\": 2,\n            \"unidadMedida\": \"PERSONAS\"\n        },\n        {\n            \n            \"categoria\": \"HUMANITARIA\",\n            \"subcategoria\": \"ENFERMERA\",\n            \"descripcion\": \"AUXILIARES DE ENFERMERIA\",\n            \"cantidad\": 10,\n            \"unidadMedida\": \"PERSONAS\"\n        },\n        {\n           \n            \"categoria\": \"HUMANITARIA\",\n            \"subcategoria\": \"ODONTOLOGOS\",\n            \"descripcion\": \"ODOTOLGOS REHABILITACIÓN\",\n            \"cantidad\": 2,\n            \"unidadMedida\": \"PERSONAS\"\n        }\n       \n    ],\n    \"sedes\": [1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/envios/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"envios",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
